@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <%- include('../layouts/header.ejs'); %>
+    <link rel="stylesheet" href="../assets/css/member.css">
+    <title>AsdarrID - Lupa Kata Sandi</title>
+</head>
+
+<body>
+    <div class="container-login">
+        <div class="form-signin">
+
+            <div class="bg-white cbm-section-shadow rounded-3 form-sign-area">
+                <div class="text-center mb-4">
+                    <a href="/">
+                        <img src="../assets/images/logo/logo-a.png" height="39">
+                    </a>
+                </div>
+                <form action="/auth/lupa-kata-sandi-verification" method="post">
+                    <div class="row g-3">
+                        <div class="fields-form on-progress">
+                            <div class="row g-3">
+                                <div class="col-12">
+                                    <label for="number" class="form-label">Nomor WhatsApp</label>
+                                    <input type="number" class="form-control" id="phone_number"
+                                        placeholder="6283123658885" name="phone_number" required>
+                                </div>
+                                <% if (locals.error) { %>
+                                <span class="text-danger pl-2" style="text-align: center;"><%= error %></span>
+                                <% } %>
+
+                            </div>
+                        </div>
+                        <div class="col-12">
+                            <input type="hidden" name="action" value="login">
+                            <button id="login-submit" class="w-100 btn btn-lg btn-primary p-1 fs-6" type="submit">
+                                kirim
+                            </button>
+                        </div>
+
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    </div>
+</body>
+
+</html>

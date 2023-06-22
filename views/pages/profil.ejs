@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <%- include('../layouts/header.ejs'); %>
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" href="../assets/css/profile.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,200;0,300;0,400;0,600;0,700;1,200;1,300;1,400;1,600;1,700&display=swap"
+        rel="stylesheet">
+    <title>AsdarrID - Profile</title>
+</head>
+
+<body>
+    <%- include('../layouts/none.ejs'); %>
+    <%- include('../layouts/navbar.ejs'); %>
+
+    <div class="blank" onclick="closeRightMenu()">
+        <!-- isi profile -->
+        <br>
+        <div class="container">
+            <div class="row">
+                <div class="card-body" style="background-color: #f8fafd!important;">
+                    <div class="row">
+                        <div class="col-md-4">
+                            <div class="card card-rw">
+                                <div class="card-body akun">
+                                    <div class="row">
+                                        <div class="col-md-12">
+                                            <h5>Informasi Akun</h5>
+                                            <div class="row">
+                                                <li style="list-style-type:none">Nama</li>
+                                                <input class="form-control" type="text" value="<%= user.name %>"
+                                                    aria-label="Disabled input example" disabled>
+                                            </div>
+
+                                            <div class="row" style="margin-top: 10px;">
+                                                <li style="list-style-type:none"> Nomor Telepon </li>
+                                                <input class="form-control" type="text" value="<%= user.phone_number %>"
+                                                    aria-label="Disabled input example" disabled>
+                                            </div>
+
+                                            <br>
+                                            <div class=" float-end" style="width: 15%;">
+                                                <a href="/auth/logout" class="btn btn-primary btn-sm"
+                                                    style="color: white;">keluar
+                                                    <i class="fa-solid fa-arrow-right-from-bracket"></i></a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-8">
+                            <div class="card card-rw">
+                                <div class="card-body">
+                                    <table class="riwayat-table" style="border-top: none;">
+
+                                        <thead>
+                                            <th> No Transaksi </th>
+                                            <th> Tanggal </th>
+                                            <th> Nama Produk </th>
+                                            <th> Status Bayar </th>
+                                            <th> Status Transaksi </th>
+                                        </thead>
+
+                                        <%data.forEach(history => {%>
+                                        <tbody>
+                                            <td><%= history.no %>
+                                            </td>
+                                            <td> <%= history.date %> </td>
+                                            <td> <%= history.product %> </td>
+                                            <td> <%= history.stat_pembayaran %> </td>
+                                            <td> <%= history.stat_transaksi %> </td>
+                                            </tr>
+                                        </tbody>
+                                        <%})%>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                        <br>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- end profile -->
+    </div>
+    <br><br>
+    <%- include('../layouts/footer.ejs'); %>
+    <script src="../assets/js/main.js"></script>
+</body>
+
+</html>
