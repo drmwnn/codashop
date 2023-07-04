@@ -8,7 +8,7 @@ const passport = require("passport");
 const multer = require('multer');
 require("./config/passport")(passport);
 const port = process.env.PORT || 3000;
-const database = process.env.MONGODB_URI || 'mongodb://127.0.0.1:27017/AsdarrID';
+const database = process.env.MONGODB_URI || 'mongodb://localhost:27017/AsdarrID';
 
 const fileStorage = multer.diskStorage ({
     destination: (request, file, cb) => {
@@ -20,8 +20,8 @@ const fileStorage = multer.diskStorage ({
 });
 
 const fileFilter = (request, file, cb) => {
-    if (file.mimetype === 'image/png' || 
-        file.mimetype === 'image/jpg' || 
+    if (file.mimetype === 'image/png' ||
+        file.mimetype === 'image/jpg' ||
         file.mimetype === 'image/jpeg') {
         cb(null, true);
     } else {

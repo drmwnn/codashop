@@ -1,47 +1,38 @@
-<div class="w3-sidebar w3-bar-block w3-card w3-animate-right" style="display:none;right:0;line-height: 50%;"
-    id="rightMenu">
-    <button onclick="closeRightMenu()" class=" w3-button w3-large"><svg xmlns="http://www.w3.org/2000/svg" width="16"
-            height="16" fill="currentColor" class="bi bi-x-lg" viewBox="0 0 16 16">
-            <path
-                d="M2.146 2.854a.5.5 0 1 1 .708-.708L8 7.293l5.146-5.147a.5.5 0 0 1 .708.708L8.707 8l5.147 5.146a.5.5 0 0 1-.708.708L8 8.707l-5.146 5.147a.5.5 0 0 1-.708-.708L7.293 8 2.146 2.854Z" />
-        </svg></button>
-    <div style="line-height: 70%;">
-        <a href="/" class="w3-bar-item w3-button" style="text-align: right;">Home</a>
-        <a href="game" class="w3-bar-item w3-button" style="text-align: right;">Game</a>
-        <a href="voucher" class="w3-bar-item w3-button" style="text-align: right;">Voucher</a>
-        <a href="entertainment" class="w3-bar-item w3-button"
-            style="text-align: right;margin-bottom: 5px;">Entertainment</a>
-    </div>
-    <% if (locals.isLoggedIn) { %>
-    <div class="w3-border-top" style="line-height: 70%;">
-        <a href="profil" class="w3-bar-item w3-button" style="text-align: right;margin-top: 5px;">Profile</a>
-        <a href="profil" class="w3-bar-item w3-button" style="text-align: right;">Riwayat Transaksi</a>
-    </div>
-    <div class="w3-border-top" style="line-height: 70%;">
-        <a href="/auth/logout" class="w3-bar-item w3-button" style="text-align: right;margin-top: 5px;">Keluar</a>
-    </div>
-    <% } else { %>
-    <div class="w3-border-top" style="line-height: 70%;">
-        <a href="login" class="w3-bar-item w3-button" style="text-align: right;margin-top: 5px;">Masuk</a>
-        <a href="register" class="w3-bar-item w3-button" style="text-align: right;">Daftar</a>
-    </div>
-    <% } %>
-
+<div class="w3-sidebar w3-bar-block w3-card w3-animate-left"
+    style="display:none; background-color: #3c1f42; width: 20%;" id="leftMenu">
+    <button  style="background-color:#3c1f42 ;"><span data-v-d9aeee20="" class="close"><svg
+                data-v-758e0345="" data-v-d9aeee20="" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                xmlns="http://www.w3.org/2000/svg" class="icon-color--smoke">
+                <path data-v-758e0345="" d="M18 6L6 18" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                    stroke-linejoin="round"></path>
+                <path data-v-758e0345="" d="M18 18L6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                    stroke-linejoin="round"></path>
+            </svg></span></button>
+    <a href="#" class="w3-bar-item w3-button">Link 1</a>
+    <a href="#" class="w3-bar-item w3-button">Link 2</a>
+    <a href="#" class="w3-bar-item w3-button">Link 3</a>
 </div>
 <div class="cmb-header-shadow" id="navbar">
     <div class="container">
         <header class="d-flex align-items-center justify-content-center justify-content-md-between py-3">
             <!-- logo -->
-            <a href="/" class="d-flex align-items-center">
-                <img src="assets/images/logo/logo-a.png" class="logo" alt=".." height="40">
-            </a>
+
+            <div class="d-flex align-items-center">
+                <button style="background-color: #3c1f42;" class="btn" type="button"><img
+                        src="assets/images/logo/bars.png" class="logo" alt=".." height="40"
+                        onclick="openLeftMenu()"></button>
+                <a class="align-items-right" href="/">
+                    <img src="assets/images/logo/coda.png" class="logo" alt=".." height="40">
+                </a>
+
+            </div>
             <!-- end logo -->
             <nav class="cbm-main-menu" id="navbar-menu">
                 <ul class="nav fs-5 navbar-brand">
-                    <li><a href="/" class="nav-link">Home</a></li>
+                    <!-- <li><a href="/" class="nav-link">Home</a></li>
                     <li><a href="game" class="nav-link">Game</a></li>
                     <li><a href="voucher" class="nav-link">Voucher</a></li>
-                    <li><a href="entertainment" class="nav-link">Entertainment</a></li>
+                    <li><a href="entertainment" class="nav-link">Entertainment</a></li> -->
                 </ul>
             </nav>
             <!-- button masuk/daftar -->
@@ -59,10 +50,10 @@
             </div>
             <% } else { %>
             <div class="text-end">
-                <a href="login" class="btn btn-outline-primary me-2 flex-shrink-0 log-img">Masuk</a>
-                <a href="register" class="btn btn-primary log-img" style="color: white;">Daftar</a>
+                <a href="register" class="btn btn-outline log-img" style="color: white; background-color: #6242fc;">
+                    Daftar </a>
                 <button class="btn btn-light sidebar-menu" type="button"><img src="assets/images/logo/bar.svg"
-                        alt="user" width="20" onclick="openRightMenu();">
+                        alt="user" width="30" onclick="openRightMenu();">
             </div>
             <% } %>
 

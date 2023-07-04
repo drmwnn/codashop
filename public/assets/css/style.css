@@ -1,16 +1,16 @@
 body{
     font-family:source sans pro,sans-serif!important;
-    background-color:#f8fafd;
+    background-color:#280031;
 }
 /* 28 in */
 .cmb-header-shadow{
-    box-shadow:0 1px 10px #0000001c;
+    box-shadow:0 0px 1px white;
 }
 /* 29 in */
 .container{
     max-width:1030px;
-    
 }
+
 nav ul{
     columns: 12;
     column-width: auto;
@@ -58,6 +58,13 @@ nav ul{
     text-underline-offset: 8px;
 }
 
+.entry-title{
+    color: white;
+}
+
+.desc{
+    background-color: #e8f953;
+}
 
   /* 62 in image slider */
   .wrap {
@@ -73,9 +80,16 @@ nav ul{
 }
 /* 112 card produk */
 .card-body {
-    border-radius: 10px;
     background-color: white;
+    border-radius: 5px;
 }
+
+
+
+.card-bg {
+    background-color: #280031;
+}
+
 /* 703 in img payment bawah */
 .list-support-payment img{
     height:33px;
@@ -145,14 +159,12 @@ nav ul{
 
 /* 161 pr cara top up */
 .product-how-to-top-up{
-    border:1px solid #b2c7d5;
     margin-top:39px;
 }
 .product-how-to-top-up h6{
     position:absolute;
     top:-14px;
     left:13px;
-    background:#f8fafd;
     padding:0 10px;
     font-weight:600;
     font-size:21px;
@@ -418,11 +430,11 @@ div#total-bill.bank_transfer{
 
 #navbar{
     top: 0;
-    position: fixed;
     width: 100%;
     z-index: 1;
-    background-color: white;
+    background-color: #3c1f42;
 }
+
 
 .site-main,
 .single-product,
@@ -453,3 +465,18 @@ div#total-bill.bank_transfer{
     border-radius: 100%;
     box-shadow: 0 1px 1.5px 0 rgba(0, 0, 0, 0.12), 0 1px 1px 0 rgba(0, 0, 0, 0.24);
   } 
+
+.btn-topup{
+    border: 1px solid black;
+}
+
+.list-group input:checked ~ .btn-topup {
+    background-color: #efe9ff;
+    border: 1px solid #6242fc;
+}
+
+.btn-outline{
+    border-radius: 20px;
+    width: 150%;
+}
+
