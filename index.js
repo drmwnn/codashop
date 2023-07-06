@@ -8,7 +8,7 @@ const passport = require("passport");
 const multer = require('multer');
 require("./config/passport")(passport);
 const port = process.env.PORT || 3000;
-const database = process.env.MONGODB_URI || 'mongodb://localhost:27017/AsdarrID' || 'mongodb+srv://asep:NPpoqdNoGU6LipbM@produks.5ljtqfz.mongodb.net/?retryWrites=true&w=majority';
+const database = process.env.MONGODB_URI || 'mongodb://localhost:27017/AsdarrID';
 
 const fileStorage = multer.diskStorage ({
     destination: (request, file, cb) => {
