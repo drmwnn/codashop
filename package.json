@@ -1,23 +1,23 @@
 {
-  "name": "asdarrid",
+  "name": "codashop",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
     "dev": "nodemon index.js",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node index"
+    "start": "node index.js"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/drmwnn/asdarrid.git"
+    "url": "git+https://github.com/drmwnn/codashop.git"
   },
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/drmwnn/asdarrid/issues"
+    "url": "https://github.com/drmwnn/codashop/issues"
   },
-  "homepage": "https://github.com/drmwnn/asdarrid#readme",
+  "homepage": "https://github.com/drmwnn/codashop#readme",
   "dependencies": {
     "bcryptjs": "^2.4.3",
     "body-parser": "^1.20.1",
