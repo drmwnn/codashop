@@ -662,8 +662,10 @@ button[data-v-e97de1be] {
 
 @media screen and (max-width: 900px){
     .w3-sidebar{
-width: 70%!important;
+    width: 70%!important;
     }
+    
+    
 }
 
 
