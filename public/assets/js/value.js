@@ -4,7 +4,7 @@ $(document).ready(function() {
         var payment = $("input[name='payment']:checked").val();
         console.log(harga, payment);
 
-        fetch("https://produk-asepdarmawan3.replit.app/").then((data) => {
+        fetch("/produk.json").then((data) => {
             return data.json();
         }).then((objectData) => {
             let tableData = "";
